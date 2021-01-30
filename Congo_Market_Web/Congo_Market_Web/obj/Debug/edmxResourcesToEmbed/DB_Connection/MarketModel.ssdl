@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Congo_MarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="DB__Mst_Category_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Category_List_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Color_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Make_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_PropertyType_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Province_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Province_List_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB__Mst_Subcategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="categoryID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="DB__Mst_Town_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="DB__Mst_TypeVihicle_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB_Email_Exist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Image_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imageID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ImageLinks" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Image_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_Image_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB_Image_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imageID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="ImageLinks" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB_Post_List_byTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="title" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_List_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_List_IsSold" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="seachTerm" Type="nvarchar" Mode="In" />
+    <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_Subcategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="categoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="DB_Post_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="DB_PostPoperty_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="propertyPostID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="propertyType" Type="tinyint" Mode="In" />
+    <Parameter Name="surfaceSize" Type="varchar" Mode="In" />
+    <Parameter Name="bethroom" Type="tinyint" Mode="In" />
+    <Parameter Name="bathroom" Type="tinyint" Mode="In" />
+    <Parameter Name="listBy" Type="varchar" Mode="In" />
+    <Parameter Name="petAllow" Type="bit" Mode="In" />
+    <Parameter Name="numberOfParking" Type="tinyint" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="DB_PostPoperty_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_PostPoperty_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB_PostPoperty_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="propertyType" Type="tinyint" Mode="In" />
+    <Parameter Name="surfaceSize" Type="varchar" Mode="In" />
+    <Parameter Name="bethroom" Type="tinyint" Mode="In" />
+    <Parameter Name="bathroom" Type="tinyint" Mode="In" />
+    <Parameter Name="listBy" Type="varchar" Mode="In" />
+    <Parameter Name="petAllow" Type="bit" Mode="In" />
+    <Parameter Name="numberOfParking" Type="tinyint" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DB_PostVihicles_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vihiclesID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="makeID" Type="tinyint" Mode="In" />
+    <Parameter Name="typeID" Type="tinyint" Mode="In" />
+    <Parameter Name="colorID" Type="tinyint" Mode="In" />
+    <Parameter Name="fuel" Type="varchar" Mode="In" />
+    <Parameter Name="transmission" Type="varchar" Mode="In" />
+    <Parameter Name="listBy" Type="varchar" Mode="In" />
+    <Parameter Name="mileage" Type="varchar" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DB_PostVihicles_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_PostVihicles_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DB_PostVihicles_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vihiclesID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="makeID" Type="tinyint" Mode="In" />
+    <Parameter Name="typeID" Type="tinyint" Mode="In" />
+    <Parameter Name="colorID" Type="tinyint" Mode="In" />
+    <Parameter Name="fuel" Type="varchar" Mode="In" />
+    <Parameter Name="transmission" Type="varchar" Mode="In" />
+    <Parameter Name="listBy" Type="varchar" Mode="In" />
+    <Parameter Name="mileage" Type="varchar" Mode="In" />
+    <Parameter Name="imageLink" Type="varchar" Mode="In" />
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="townID" Type="tinyint" Mode="In" />
+    <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+    <Parameter Name="title" Type="varchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="condition" Type="bit" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
+    <Parameter Name="description" Type="varchar(max)" Mode="In" />
+    <Parameter Name="isSold" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DB_Register_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="firstName" Type="varchar" Mode="In" />
+    <Parameter Name="lastName" Type="varchar" Mode="In" />
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+    <Parameter Name="telephone" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Register_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="DB_Register_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Register_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DB_Register_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="firstName" Type="varchar" Mode="In" />
+    <Parameter Name="lastName" Type="varchar" Mode="In" />
+    <Parameter Name="telephone" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DB_Congo_MarketModelStoreContainer" />
+</Schema>

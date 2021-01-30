@@ -1,0 +1,197 @@
+﻿@model Congo_Market_Web.Models.PostModel
+
+
+
+<div class="banner-bootom-w3-agileits py-5">
+    <div class="container py-xl-4 py-lg-2">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+            @Model.title
+        </h3>
+        <!-- //tittle heading -->
+        <div class="row">
+            <div class="col-lg-5 col-md-8 single-right-left ">
+                <div class="grid images_3_of_2">
+                    <div class="flexslider">
+                        <ul class="slides">
+
+                            <li data-thumb="/productsImages/@Model.postID/@Model.imagelink">
+                                <div class="thumb-image">
+                                    <img src="/productsImages/@Model.postID/@Model.imagelink" data-imagezoom="true" class="img-fluid" alt="">
+                                </div>
+                            </li>
+
+
+                            @foreach (var item in ViewBag.images)
+                            {
+                                <li data-thumb="/productsImages/@item.Image_postID/@item.Image_ImageLinks">
+                                    <div class="thumb-image">
+                                        <img src="/productsImages/@item.Image_postID/@item.Image_ImageLinks" data-imagezoom="true" class="img-fluid" alt="">
+                                    </div>
+                                </li>
+                            }
+
+
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 single-right-left simpleCart_shelfItem">
+                <h3 class="mb-3">@Model.title</h3>
+                <p class="mb-3">
+                    <span class="item_price">Fc @Model.price</span>
+                </p>
+
+                <div class="single-infoagile">
+                    <ul>
+                        <li class="mb-3">
+                            Prix:   Fc @Model.price
+                        </li>
+                        <li class="mb-3">
+                            Numero: @Model.telephone
+                        </li>
+                        <li class="mb-3">
+                            Date : @Model.date
+                        </li>
+                        <li class="mb-3">
+                            Ville : @Model.ville;
+                        </li>
+                    </ul>
+                </div>
+
+                @if (Model.surfaceSize != null)
+                {
+
+                    <div class="single-infoagile">
+                        <ul>
+                            <li class="mb-3">
+                                Chambre : @Model.bethroom
+                            </li>
+                            <li class="mb-3">
+                                Salle de bains : @Model.bathroom
+                            </li>
+                            <li class="mb-3">
+                                Nombre de parking: @Model.numberOfParking
+                            </li>
+                            <li class="mb-3">
+                                Taille de la surface : @Model.surfaceSize;
+                            </li>
+                        </ul>
+                    </div>
+                }
+
+
+
+                @if (Model.surfaceSize != null)
+                {
+
+                    <div class="single-infoagile">
+                        <ul>
+                            <li class="mb-3">
+                                Chambre : @Model.bethroom
+                            </li>
+                            <li class="mb-3">
+                                Salle de bains : @Model.bathroom
+                            </li>
+                            <li class="mb-3">
+                                Nombre de parking: @Model.numberOfParking
+                            </li>
+                            <li class="mb-3">
+                                Taille de la surface : @Model.surfaceSize;
+                            </li>
+                        </ul>
+                    </div>
+                }
+
+
+
+                @if (Model.mileage != null)
+                {
+
+                    <div class="single-infoagile">
+                        <ul>
+                            <li class="mb-3">
+                                Kilométrage : @Model.mileage
+                            </li>
+                            <li class="mb-3">
+                                Mark : @Model.makeName
+                            </li>
+                            <li class="mb-3">
+
+                                Couleur: @Model.color
+                            </li>
+                     
+                        </ul>
+                    </div>
+                }
+
+
+
+
+                <div class="product-single-w3l">
+                    <p class="my-3">
+                        @Model.description
+                    </p>
+                    @*<ul>
+                <li class="mb-1">
+                    3 GB RAM | 16 GB ROM | Expandable Upto 256 GB
+                </li>
+                <li class="mb-1">
+                    5.5 inch Full HD Display
+                </li>
+                <li class="mb-1">
+                    13MP Rear Camera | 8MP Front Camera
+                </li>
+                <li class="mb-1">
+                    3300 mAh Battery
+                </li>
+                <li class="mb-1">
+                    Exynos 7870 Octa Core 1.6GHz Processor
+                </li>
+            </ul>*@
+                    @*<p class="my-sm-4 my-3">
+                <i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
+            </p>*@
+                </div>
+                @*<div class="occasion-cart">
+            <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                <form action="#" method="post">
+                    <fieldset>
+                        <input type="hidden" name="cmd" value="_cart" />
+                        <input type="hidden" name="add" value="1" />
+                        <input type="hidden" name="business" value=" " />
+                        <input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
+                        <input type="hidden" name="amount" value="200.00" />
+                        <input type="hidden" name="discount_amount" value="1.00" />
+                        <input type="hidden" name="currency_code" value="USD" />
+                        <input type="hidden" name="return" value=" " />
+                        <input type="hidden" name="cancel_return" value=" " />
+                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-2.2.3.min.js"></script>
+
+<script src="/js/imagezoom.js"></script>
+<!-- //imagezoom -->
+<!-- flexslider -->
+<link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
+
+
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>

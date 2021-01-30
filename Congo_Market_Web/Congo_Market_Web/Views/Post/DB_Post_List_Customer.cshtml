@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Congo_Market_Web.DB_Connection.DB_Post_List_Customer_Result>
+
+@{
+    ViewBag.Title = "DB_Post_List_Customer";
+}
+
+<h2>Product List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create","Post")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            TiTre
+        </th>
+        <th>
+           Prix
+        </th>
+        <th>
+            Date
+        </th>
+
+    </tr>
+
+   @foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Post_title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Post_price)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Post_date)
+    </td>
+ 
+
+
+    @if (item.Post_isSold == true)
+    {
+<td>
+    <a class="btn btn-success" href="@Url.Action("DB_Post_List_IsSold","Post",new {postID = item.Post_postID  })">Vendue</a>
+</td>
+  
+    }
+    else
+    {
+<td>
+    <a class="btn btn-danger" href="@Url.Action("DB_Post_List_IsSold","Post",new { postID = item.Post_postID })">
+        Non vendu
+    </a>
+</td>
+    }
+
+</tr>
+}
+</table>

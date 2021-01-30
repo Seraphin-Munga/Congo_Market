@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>40</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Register
+--
+registerID
+firstName
+lastName
+email
+telephone
+password</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>50</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Province
+--
+provinceID
+provinceName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>140</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Town
+--
+townID
+provinceID
+townName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Category
+--
+categoryID
+categoryName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>160</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Subcategory
+--
+subcategoryID
+categoryID
+subcategoryName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>250</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Vihicles_Make
+--
+makeID
+makeName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>260</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Vihicles_Type
+--
+typeID
+typeName
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>350</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Color
+--
+colorID
+colorName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>190</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Post
+--
+postID
+registerID
+townID
+subcategoryID
+title
+price
+condition (Allow Null)
+description
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>390</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Post_Vihicles
+--
+VihiclesID
+postID
+makeID
+typeID
+colorID
+fuel
+transmission
+listBy
+mileage
+
+
+[waiting for message]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>440</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Post_Property
+--
+propertyID
+postID
+properTypeID
+surfaceZize
+bedrooms
+bathroons
+listBy
+petAllow
+numberOfParking</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>340</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Property_Type
+--
+properTypeID
+propertName
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

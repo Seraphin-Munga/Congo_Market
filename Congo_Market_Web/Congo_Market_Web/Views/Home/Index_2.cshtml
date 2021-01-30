@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Congo_Market_Web.DB_Connection.DB_Post_List_Result>
+
+@{
+    ViewBag.Title = "Index_2";
+}
+
+<h2>Index_2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_postID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_registerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_townID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_subcategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_condition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_imageLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_postID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_propertyType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_surfaceSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_bethroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_bathroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_listBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_petAllow)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Property_numberOfParking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_vihiclesID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_postID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_makeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_typeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_colorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_fuel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_transmission)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_listBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post_Vihicles_mileage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_postID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_registerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_townID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_subcategoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_imageLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_postID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_propertyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_surfaceSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_bethroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_bathroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_listBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_petAllow)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Property_numberOfParking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_vihiclesID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_postID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_makeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_typeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_colorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_fuel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_transmission)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_listBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post_Vihicles_mileage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

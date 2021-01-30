@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_Congo_MarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="DB__Mst_Category_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Category_List_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Color_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Make_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_PropertyType_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Province_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Province_List_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB__Mst_Subcategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="categoryID" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="DB__Mst_Town_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="DB__Mst_TypeVihicle_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB_Email_Exist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Image_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="imageID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ImageLinks" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Image_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_Image_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB_Image_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="imageID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="ImageLinks" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB_Post_List_byTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="title" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_List_Customer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_List_IsSold" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="seachTerm" Type="nvarchar" Mode="In" />
+          <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_Subcategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="categoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="provinceID" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="DB_Post_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="DB_PostPoperty_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="propertyPostID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="propertyType" Type="tinyint" Mode="In" />
+          <Parameter Name="surfaceSize" Type="varchar" Mode="In" />
+          <Parameter Name="bethroom" Type="tinyint" Mode="In" />
+          <Parameter Name="bathroom" Type="tinyint" Mode="In" />
+          <Parameter Name="listBy" Type="varchar" Mode="In" />
+          <Parameter Name="petAllow" Type="bit" Mode="In" />
+          <Parameter Name="numberOfParking" Type="tinyint" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="DB_PostPoperty_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_PostPoperty_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB_PostPoperty_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="propertyType" Type="tinyint" Mode="In" />
+          <Parameter Name="surfaceSize" Type="varchar" Mode="In" />
+          <Parameter Name="bethroom" Type="tinyint" Mode="In" />
+          <Parameter Name="bathroom" Type="tinyint" Mode="In" />
+          <Parameter Name="listBy" Type="varchar" Mode="In" />
+          <Parameter Name="petAllow" Type="bit" Mode="In" />
+          <Parameter Name="numberOfParking" Type="tinyint" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="DB_PostVihicles_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vihiclesID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="makeID" Type="tinyint" Mode="In" />
+          <Parameter Name="typeID" Type="tinyint" Mode="In" />
+          <Parameter Name="colorID" Type="tinyint" Mode="In" />
+          <Parameter Name="fuel" Type="varchar" Mode="In" />
+          <Parameter Name="transmission" Type="varchar" Mode="In" />
+          <Parameter Name="listBy" Type="varchar" Mode="In" />
+          <Parameter Name="mileage" Type="varchar" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="DB_PostVihicles_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_PostVihicles_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DB_PostVihicles_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vihiclesID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="postID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="makeID" Type="tinyint" Mode="In" />
+          <Parameter Name="typeID" Type="tinyint" Mode="In" />
+          <Parameter Name="colorID" Type="tinyint" Mode="In" />
+          <Parameter Name="fuel" Type="varchar" Mode="In" />
+          <Parameter Name="transmission" Type="varchar" Mode="In" />
+          <Parameter Name="listBy" Type="varchar" Mode="In" />
+          <Parameter Name="mileage" Type="varchar" Mode="In" />
+          <Parameter Name="imageLink" Type="varchar" Mode="In" />
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="townID" Type="tinyint" Mode="In" />
+          <Parameter Name="subcategoryID" Type="tinyint" Mode="In" />
+          <Parameter Name="title" Type="varchar" Mode="In" />
+          <Parameter Name="price" Type="decimal" Mode="In" />
+          <Parameter Name="condition" Type="bit" Mode="In" />
+          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="description" Type="varchar(max)" Mode="In" />
+          <Parameter Name="isSold" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="DB_Register_Creation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="firstName" Type="varchar" Mode="In" />
+          <Parameter Name="lastName" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="telephone" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Register_Detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="DB_Register_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Register_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DB_Register_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="registerID" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="firstName" Type="varchar" Mode="In" />
+          <Parameter Name="lastName" Type="varchar" Mode="In" />
+          <Parameter Name="telephone" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DB_Congo_MarketModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_Congo_MarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_Congo_MarketEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="DB__Mst_Color_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Color_List_Result)" />
+          <FunctionImport Name="DB__Mst_Make_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Make_List_Result)" />
+          <FunctionImport Name="DB__Mst_PropertyType_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_PropertyType_List_Result)" />
+          <FunctionImport Name="DB__Mst_Province_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Province_List_Result)" />
+          <FunctionImport Name="DB__Mst_Subcategory_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Subcategory_List_Result)">
+          <Parameter Name="categoryID" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="DB__Mst_Town_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Town_List_Result)">
+          <Parameter Name="provinceID" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="DB__Mst_TypeVihicle_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_TypeVihicle_List_Result)" />
+          <FunctionImport Name="DB_Image_Creation">
+            <Parameter Name="imageID" Mode="In" Type="Guid" />
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="ImageLinks" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Image_List" ReturnType="Collection(DB_Congo_MarketModel.DB_Image_List_Result)" />
+          <FunctionImport Name="DB_Image_Update">
+            <Parameter Name="imageID" Mode="In" Type="Guid" />
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="ImageLinks" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Register_Creation">
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="telephone" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Register_Detail" ReturnType="Collection(DB_Congo_MarketModel.DB_Register_Detail_Result)">
+          <Parameter Name="registerID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Register_Login" ReturnType="Collection(DB_Congo_MarketModel.DB_Register_Login_Result)">
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Register_Update">
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="firstName" Mode="In" Type="String" />
+            <Parameter Name="lastName" Mode="In" Type="String" />
+            <Parameter Name="telephone" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DB_Congo_MarketModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DB_Congo_MarketModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="DB_Image_Detail" ReturnType="Collection(DB_Congo_MarketModel.DB_Image_Detail_Result)">
+          <Parameter Name="postID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB__Mst_Category_List" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Category_List_Result)" />
+          <FunctionImport Name="DB__Mst_Category_List_2" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Category_List_2_Result)" />
+          <FunctionImport Name="DB__Mst_Province_List_2" ReturnType="Collection(DB_Congo_MarketModel.DB__Mst_Province_List_2_Result)" />
+          <FunctionImport Name="DB_Post_Creation">
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_Update">
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostPoperty_Creation">
+            <Parameter Name="propertyPostID" Mode="In" Type="Guid" />
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="propertyType" Mode="In" Type="Byte" />
+            <Parameter Name="surfaceSize" Mode="In" Type="String" />
+            <Parameter Name="bethroom" Mode="In" Type="Byte" />
+            <Parameter Name="bathroom" Mode="In" Type="Byte" />
+            <Parameter Name="listBy" Mode="In" Type="String" />
+            <Parameter Name="petAllow" Mode="In" Type="Boolean" />
+            <Parameter Name="numberOfParking" Mode="In" Type="Byte" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostPoperty_Detail" ReturnType="Collection(DB_Congo_MarketModel.DB_PostPoperty_Detail_Result)">
+          <Parameter Name="postID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostPoperty_List" ReturnType="Collection(DB_Congo_MarketModel.DB_PostPoperty_List_Result)" />
+          <FunctionImport Name="DB_PostPoperty_Update">
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="propertyType" Mode="In" Type="Byte" />
+            <Parameter Name="surfaceSize" Mode="In" Type="String" />
+            <Parameter Name="bethroom" Mode="In" Type="Byte" />
+            <Parameter Name="bathroom" Mode="In" Type="Byte" />
+            <Parameter Name="listBy" Mode="In" Type="String" />
+            <Parameter Name="petAllow" Mode="In" Type="Boolean" />
+            <Parameter Name="numberOfParking" Mode="In" Type="Byte" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostVihicles_Creation">
+            <Parameter Name="vihiclesID" Mode="In" Type="Guid" />
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="makeID" Mode="In" Type="Byte" />
+            <Parameter Name="typeID" Mode="In" Type="Byte" />
+            <Parameter Name="colorID" Mode="In" Type="Byte" />
+            <Parameter Name="fuel" Mode="In" Type="String" />
+            <Parameter Name="transmission" Mode="In" Type="String" />
+            <Parameter Name="listBy" Mode="In" Type="String" />
+            <Parameter Name="mileage" Mode="In" Type="String" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostVihicles_Detail" ReturnType="Collection(DB_Congo_MarketModel.DB_PostVihicles_Detail_Result)">
+          <Parameter Name="postID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_PostVihicles_List" ReturnType="Collection(DB_Congo_MarketModel.DB_PostVihicles_List_Result)" />
+          <FunctionImport Name="DB_PostVihicles_Update">
+            <Parameter Name="vihiclesID" Mode="In" Type="Guid" />
+            <Parameter Name="postID" Mode="In" Type="Guid" />
+            <Parameter Name="makeID" Mode="In" Type="Byte" />
+            <Parameter Name="typeID" Mode="In" Type="Byte" />
+            <Parameter Name="colorID" Mode="In" Type="Byte" />
+            <Parameter Name="fuel" Mode="In" Type="String" />
+            <Parameter Name="transmission" Mode="In" Type="String" />
+            <Parameter Name="listBy" Mode="In" Type="String" />
+            <Parameter Name="mileage" Mode="In" Type="String" />
+            <Parameter Name="imageLink" Mode="In" Type="String" />
+            <Parameter Name="registerID" Mode="In" Type="Guid" />
+            <Parameter Name="townID" Mode="In" Type="Byte" />
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="title" Mode="In" Type="String" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+            <Parameter Name="condition" Mode="In" Type="Boolean" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="isSold" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_Subcategory_List" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_Subcategory_List_Result)">
+            <Parameter Name="subcategoryID" Mode="In" Type="Byte" />
+            <Parameter Name="categoryID" Mode="In" Type="Byte" />
+            <Parameter Name="provinceID" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_List" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_List_Result)" />
+          <FunctionImport Name="DB_Post_List_IsSold">
+          <Parameter Name="postID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_List_Customer" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_List_Customer_Result)">
+          <Parameter Name="registerID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Email_Exist" ReturnType="Collection(DB_Congo_MarketModel.DB_Email_Exist_Result)">
+          <Parameter Name="email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Register_ResetPassword">
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_Detail" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_Detail_Result)">
+          <Parameter Name="postID" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_Search" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_Search_Result)">
+            <Parameter Name="seachTerm" Mode="In" Type="String" />
+            <Parameter Name="provinceID" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="DB_Post_List_byTitle" ReturnType="Collection(DB_Congo_MarketModel.DB_Post_List_byTitle_Result)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="DB__Mst_Color_List_Result">
+          <Property Type="Byte" Name="Color_colorID" Nullable="false" />
+          <Property Type="String" Name="Color_colorName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Make_List_Result">
+          <Property Type="Byte" Name="Vihicles_Make_makeID" Nullable="false" />
+          <Property Type="String" Name="Vihicles_Make_makeName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_PropertyType_List_Result">
+          <Property Type="Byte" Name="Property_Type_proppertyType" Nullable="false" />
+          <Property Type="String" Name="Property_Type_propertyName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Province_List_Result">
+          <Property Type="Byte" Name="Province_provinceID" Nullable="false" />
+          <Property Type="String" Name="Province_provinceName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Subcategory_List_Result">
+          <Property Type="Byte" Name="Subcategory_subcategoryID" Nullable="false" />
+          <Property Type="Byte" Name="Subcategory_categoryID" Nullable="false" />
+          <Property Type="String" Name="Subcategory_subcategoryName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Category_categoryName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Town_List_Result">
+          <Property Type="Byte" Name="Town_townID" Nullable="false" />
+          <Property Type="Byte" Name="Town_provinceID" Nullable="false" />
+          <Property Type="String" Name="Town_townName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Province_provinceName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_TypeVihicle_List_Result">
+          <Property Type="Byte" Name="Vihicles_Type_typeID" Nullable="false" />
+          <Property Type="String" Name="Vihicles_Type_typeName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Image_List_Result">
+          <Property Type="Guid" Name="Image_imageID" Nullable="false" />
+          <Property Type="Guid" Name="Image_postID" Nullable="false" />
+          <Property Type="String" Name="Image_ImageLinks" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Register_Detail_Result">
+          <Property Type="Guid" Name="Register_registerID" Nullable="false" />
+          <Property Type="String" Name="Register_firstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_lastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_email" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_password" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Register_telephone" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="DB_Register_Login_Result">
+          <Property Type="Guid" Name="Register_registerID" Nullable="false" />
+          <Property Type="String" Name="Register_firstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_lastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_email" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_password" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Register_telephone" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="DB_Image_Detail_Result">
+          <Property Type="Guid" Name="Image_imageID" Nullable="false" />
+          <Property Type="Guid" Name="Image_postID" Nullable="false" />
+          <Property Type="String" Name="Image_ImageLinks" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Category_List_Result">
+          <Property Type="Byte" Name="Category_categoryID" Nullable="false" />
+          <Property Type="String" Name="Category_categoryName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Category_List_2_Result">
+          <Property Type="Byte" Name="Category_categoryID" Nullable="false" />
+          <Property Type="String" Name="Category_categoryName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB__Mst_Province_List_2_Result">
+          <Property Type="Byte" Name="Province_provinceID" Nullable="false" />
+          <Property Type="String" Name="Province_provinceName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_PostPoperty_Detail_Result">
+          <Property Type="Guid" Name="Post_Property_propertyPostID" Nullable="false" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="false" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="false" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DB_PostPoperty_List_Result">
+          <Property Type="Guid" Name="Post_Property_propertyPostID" Nullable="false" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="false" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="false" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="false" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DB_PostVihicles_Detail_Result">
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="false" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="false" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DB_PostVihicles_List_Result">
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="false" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="false" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="false" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_Subcategory_List_Result">
+          <Property Type="Guid" Name="Post_postID" Nullable="false" />
+          <Property Type="Guid" Name="Post_registerID" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+          <Property Type="String" Name="Post_imageLink" Nullable="true" MaxLength="150" />
+          <Property Type="Byte" Name="Province_provinceID" Nullable="false" />
+          <Property Type="Byte" Name="Category_categoryID" Nullable="false" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="true" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="true" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="true" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_List_Result">
+          <Property Type="Guid" Name="Post_postID" Nullable="false" />
+          <Property Type="Guid" Name="Post_registerID" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+          <Property Type="String" Name="Post_imageLink" Nullable="true" MaxLength="150" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="true" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="true" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="true" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_List_Customer_Result">
+          <Property Type="Guid" Name="Post_postID" Nullable="false" />
+          <Property Type="Guid" Name="Post_registerID" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+          <Property Type="String" Name="Post_imageLink" Nullable="true" MaxLength="150" />
+          <Property Type="Boolean" Name="Post_isSold" Nullable="false" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="true" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="true" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="true" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Email_Exist_Result">
+          <Property Type="Guid" Name="Register_registerID" Nullable="false" />
+          <Property Type="String" Name="Register_firstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_lastName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_email" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Register_password" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Register_telephone" Nullable="false" MaxLength="14" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_Detail_Result">
+          <Property Type="Guid" Name="Post_postID" Nullable="false" />
+          <Property Type="Guid" Name="Post_registerID" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+          <Property Type="String" Name="Post_imageLink" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Register_telephone" Nullable="false" MaxLength="14" />
+          <Property Type="String" Name="Town_townName" Nullable="false" MaxLength="50" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="true" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="true" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="true" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_colorName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Vihicles_Make_makeName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_Search_Result">
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" />
+          <Property Type="Guid" Name="postID" Nullable="false" />
+          <Property Type="String" Name="imageLink" Nullable="true" MaxLength="150" />
+        </ComplexType>
+        <ComplexType Name="DB_Post_List_byTitle_Result">
+          <Property Type="Guid" Name="Post_postID" Nullable="false" />
+          <Property Type="Guid" Name="Post_registerID" Nullable="false" />
+          <Property Type="Byte" Name="Post_townID" Nullable="false" />
+          <Property Type="Byte" Name="Post_subcategoryID" Nullable="false" />
+          <Property Type="String" Name="Post_title" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Post_price" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="Post_condition" Nullable="true" />
+          <Property Type="DateTime" Name="Post_date" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Post_description" Nullable="true" />
+          <Property Type="String" Name="Post_imageLink" Nullable="true" MaxLength="150" />
+          <Property Type="Guid" Name="Post_Property_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_propertyType" Nullable="true" />
+          <Property Type="String" Name="Post_Property_surfaceSize" Nullable="true" MaxLength="50" />
+          <Property Type="Byte" Name="Post_Property_bethroom" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_bathroom" Nullable="true" />
+          <Property Type="String" Name="Post_Property_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Post_Property_petAllow" Nullable="true" />
+          <Property Type="Byte" Name="Post_Property_numberOfParking" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_vihiclesID" Nullable="true" />
+          <Property Type="Guid" Name="Post_Vihicles_postID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_makeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_typeID" Nullable="true" />
+          <Property Type="Byte" Name="Post_Vihicles_colorID" Nullable="true" />
+          <Property Type="String" Name="Post_Vihicles_fuel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_transmission" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_listBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Post_Vihicles_mileage" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_Congo_MarketModelStoreContainer" CdmEntityContainer="DB_Congo_MarketEntities" >
+          <FunctionImportMapping FunctionImportName="DB__Mst_Color_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Color_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Color_List_Result">
+                <ScalarProperty Name="Color_colorID" ColumnName="Color_colorID" />
+                <ScalarProperty Name="Color_colorName" ColumnName="Color_colorName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Make_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Make_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Make_List_Result">
+                <ScalarProperty Name="Vihicles_Make_makeID" ColumnName="Vihicles_Make_makeID" />
+                <ScalarProperty Name="Vihicles_Make_makeName" ColumnName="Vihicles_Make_makeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_PropertyType_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_PropertyType_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_PropertyType_List_Result">
+                <ScalarProperty Name="Property_Type_proppertyType" ColumnName="Property_Type_proppertyType" />
+                <ScalarProperty Name="Property_Type_propertyName" ColumnName="Property_Type_propertyName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Province_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Province_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Province_List_Result">
+                <ScalarProperty Name="Province_provinceID" ColumnName="Province_provinceID" />
+                <ScalarProperty Name="Province_provinceName" ColumnName="Province_provinceName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Subcategory_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Subcategory_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Subcategory_List_Result">
+                <ScalarProperty Name="Subcategory_subcategoryID" ColumnName="Subcategory_subcategoryID" />
+                <ScalarProperty Name="Subcategory_categoryID" ColumnName="Subcategory_categoryID" />
+                <ScalarProperty Name="Subcategory_subcategoryName" ColumnName="Subcategory_subcategoryName" />
+                <ScalarProperty Name="Category_categoryName" ColumnName="Category_categoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Town_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Town_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Town_List_Result">
+                <ScalarProperty Name="Town_townID" ColumnName="Town_townID" />
+                <ScalarProperty Name="Town_provinceID" ColumnName="Town_provinceID" />
+                <ScalarProperty Name="Town_townName" ColumnName="Town_townName" />
+                <ScalarProperty Name="Province_provinceName" ColumnName="Province_provinceName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_TypeVihicle_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_TypeVihicle_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_TypeVihicle_List_Result">
+                <ScalarProperty Name="Vihicles_Type_typeID" ColumnName="Vihicles_Type_typeID" />
+                <ScalarProperty Name="Vihicles_Type_typeName" ColumnName="Vihicles_Type_typeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Image_Creation" FunctionName="DB_Congo_MarketModel.Store.DB_Image_Creation" />
+          <FunctionImportMapping FunctionImportName="DB_Image_List" FunctionName="DB_Congo_MarketModel.Store.DB_Image_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Image_List_Result">
+                <ScalarProperty Name="Image_imageID" ColumnName="Image_imageID" />
+                <ScalarProperty Name="Image_postID" ColumnName="Image_postID" />
+                <ScalarProperty Name="Image_ImageLinks" ColumnName="Image_ImageLinks" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Image_Update" FunctionName="DB_Congo_MarketModel.Store.DB_Image_Update" />
+          <FunctionImportMapping FunctionImportName="DB_Register_Creation" FunctionName="DB_Congo_MarketModel.Store.DB_Register_Creation" />
+          <FunctionImportMapping FunctionImportName="DB_Register_Detail" FunctionName="DB_Congo_MarketModel.Store.DB_Register_Detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Register_Detail_Result">
+                <ScalarProperty Name="Register_registerID" ColumnName="Register_registerID" />
+                <ScalarProperty Name="Register_firstName" ColumnName="Register_firstName" />
+                <ScalarProperty Name="Register_lastName" ColumnName="Register_lastName" />
+                <ScalarProperty Name="Register_email" ColumnName="Register_email" />
+                <ScalarProperty Name="Register_password" ColumnName="Register_password" />
+                <ScalarProperty Name="Register_telephone" ColumnName="Register_telephone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Register_Login" FunctionName="DB_Congo_MarketModel.Store.DB_Register_Login">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Register_Login_Result">
+                <ScalarProperty Name="Register_registerID" ColumnName="Register_registerID" />
+                <ScalarProperty Name="Register_firstName" ColumnName="Register_firstName" />
+                <ScalarProperty Name="Register_lastName" ColumnName="Register_lastName" />
+                <ScalarProperty Name="Register_email" ColumnName="Register_email" />
+                <ScalarProperty Name="Register_password" ColumnName="Register_password" />
+                <ScalarProperty Name="Register_telephone" ColumnName="Register_telephone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Register_Update" FunctionName="DB_Congo_MarketModel.Store.DB_Register_Update" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_Congo_MarketModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_Congo_MarketModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_Congo_MarketModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_Congo_MarketModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_Congo_MarketModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_Congo_MarketModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_Congo_MarketModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="DB_Image_Detail" FunctionName="DB_Congo_MarketModel.Store.DB_Image_Detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Image_Detail_Result">
+                <ScalarProperty Name="Image_imageID" ColumnName="Image_imageID" />
+                <ScalarProperty Name="Image_postID" ColumnName="Image_postID" />
+                <ScalarProperty Name="Image_ImageLinks" ColumnName="Image_ImageLinks" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Category_List" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Category_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Category_List_Result">
+                <ScalarProperty Name="Category_categoryID" ColumnName="Category_categoryID" />
+                <ScalarProperty Name="Category_categoryName" ColumnName="Category_categoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Category_List_2" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Category_List_2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Category_List_2_Result">
+                <ScalarProperty Name="Category_categoryID" ColumnName="Category_categoryID" />
+                <ScalarProperty Name="Category_categoryName" ColumnName="Category_categoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB__Mst_Province_List_2" FunctionName="DB_Congo_MarketModel.Store.DB__Mst_Province_List_2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB__Mst_Province_List_2_Result">
+                <ScalarProperty Name="Province_provinceID" ColumnName="Province_provinceID" />
+                <ScalarProperty Name="Province_provinceName" ColumnName="Province_provinceName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Post_Creation" FunctionName="DB_Congo_MarketModel.Store.DB_Post_Creation" />
+          <FunctionImportMapping FunctionImportName="DB_Post_Update" FunctionName="DB_Congo_MarketModel.Store.DB_Post_Update" />
+          <FunctionImportMapping FunctionImportName="DB_PostPoperty_Creation" FunctionName="DB_Congo_MarketModel.Store.DB_PostPoperty_Creation" />
+          <FunctionImportMapping FunctionImportName="DB_PostPoperty_Detail" FunctionName="DB_Congo_MarketModel.Store.DB_PostPoperty_Detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_PostPoperty_Detail_Result">
+                <ScalarProperty Name="Post_Property_propertyPostID" ColumnName="Post_Property_propertyPostID" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_PostPoperty_List" FunctionName="DB_Congo_MarketModel.Store.DB_PostPoperty_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_PostPoperty_List_Result">
+                <ScalarProperty Name="Post_Property_propertyPostID" ColumnName="Post_Property_propertyPostID" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_PostPoperty_Update" FunctionName="DB_Congo_MarketModel.Store.DB_PostPoperty_Update" />
+          <FunctionImportMapping FunctionImportName="DB_PostVihicles_Creation" FunctionName="DB_Congo_MarketModel.Store.DB_PostVihicles_Creation" />
+          <FunctionImportMapping FunctionImportName="DB_PostVihicles_Detail" FunctionName="DB_Congo_MarketModel.Store.DB_PostVihicles_Detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_PostVihicles_Detail_Result">
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_PostVihicles_List" FunctionName="DB_Congo_MarketModel.Store.DB_PostVihicles_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_PostVihicles_List_Result">
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_PostVihicles_Update" FunctionName="DB_Congo_MarketModel.Store.DB_PostVihicles_Update" />
+          <FunctionImportMapping FunctionImportName="DB_Post_Subcategory_List" FunctionName="DB_Congo_MarketModel.Store.DB_Post_Subcategory_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_Subcategory_List_Result">
+                <ScalarProperty Name="Post_postID" ColumnName="Post_postID" />
+                <ScalarProperty Name="Post_registerID" ColumnName="Post_registerID" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+                <ScalarProperty Name="Post_imageLink" ColumnName="Post_imageLink" />
+                <ScalarProperty Name="Province_provinceID" ColumnName="Province_provinceID" />
+                <ScalarProperty Name="Category_categoryID" ColumnName="Category_categoryID" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Post_List" FunctionName="DB_Congo_MarketModel.Store.DB_Post_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_List_Result">
+                <ScalarProperty Name="Post_postID" ColumnName="Post_postID" />
+                <ScalarProperty Name="Post_registerID" ColumnName="Post_registerID" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+                <ScalarProperty Name="Post_imageLink" ColumnName="Post_imageLink" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Post_List_IsSold" FunctionName="DB_Congo_MarketModel.Store.DB_Post_List_IsSold" />
+          <FunctionImportMapping FunctionImportName="DB_Post_List_Customer" FunctionName="DB_Congo_MarketModel.Store.DB_Post_List_Customer">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_List_Customer_Result">
+                <ScalarProperty Name="Post_postID" ColumnName="Post_postID" />
+                <ScalarProperty Name="Post_registerID" ColumnName="Post_registerID" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+                <ScalarProperty Name="Post_imageLink" ColumnName="Post_imageLink" />
+                <ScalarProperty Name="Post_isSold" ColumnName="Post_isSold" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Email_Exist" FunctionName="DB_Congo_MarketModel.Store.DB_Email_Exist">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Email_Exist_Result">
+                <ScalarProperty Name="Register_registerID" ColumnName="Register_registerID" />
+                <ScalarProperty Name="Register_firstName" ColumnName="Register_firstName" />
+                <ScalarProperty Name="Register_lastName" ColumnName="Register_lastName" />
+                <ScalarProperty Name="Register_email" ColumnName="Register_email" />
+                <ScalarProperty Name="Register_password" ColumnName="Register_password" />
+                <ScalarProperty Name="Register_telephone" ColumnName="Register_telephone" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Register_ResetPassword" FunctionName="DB_Congo_MarketModel.Store.DB_Register_ResetPassword" />
+          <FunctionImportMapping FunctionImportName="DB_Post_Detail" FunctionName="DB_Congo_MarketModel.Store.DB_Post_Detail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_Detail_Result">
+                <ScalarProperty Name="Post_postID" ColumnName="Post_postID" />
+                <ScalarProperty Name="Post_registerID" ColumnName="Post_registerID" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+                <ScalarProperty Name="Post_imageLink" ColumnName="Post_imageLink" />
+                <ScalarProperty Name="Register_telephone" ColumnName="Register_telephone" />
+                <ScalarProperty Name="Town_townName" ColumnName="Town_townName" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+                <ScalarProperty Name="Post_colorName" ColumnName="Post_colorName" />
+                <ScalarProperty Name="Vihicles_Make_makeName" ColumnName="Vihicles_Make_makeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Post_Search" FunctionName="DB_Congo_MarketModel.Store.DB_Post_Search">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_Search_Result">
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="postID" ColumnName="postID" />
+                <ScalarProperty Name="imageLink" ColumnName="imageLink" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="DB_Post_List_byTitle" FunctionName="DB_Congo_MarketModel.Store.DB_Post_List_byTitle">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_Congo_MarketModel.DB_Post_List_byTitle_Result">
+                <ScalarProperty Name="Post_postID" ColumnName="Post_postID" />
+                <ScalarProperty Name="Post_registerID" ColumnName="Post_registerID" />
+                <ScalarProperty Name="Post_townID" ColumnName="Post_townID" />
+                <ScalarProperty Name="Post_subcategoryID" ColumnName="Post_subcategoryID" />
+                <ScalarProperty Name="Post_title" ColumnName="Post_title" />
+                <ScalarProperty Name="Post_price" ColumnName="Post_price" />
+                <ScalarProperty Name="Post_condition" ColumnName="Post_condition" />
+                <ScalarProperty Name="Post_date" ColumnName="Post_date" />
+                <ScalarProperty Name="Post_description" ColumnName="Post_description" />
+                <ScalarProperty Name="Post_imageLink" ColumnName="Post_imageLink" />
+                <ScalarProperty Name="Post_Property_postID" ColumnName="Post_Property_postID" />
+                <ScalarProperty Name="Post_Property_propertyType" ColumnName="Post_Property_propertyType" />
+                <ScalarProperty Name="Post_Property_surfaceSize" ColumnName="Post_Property_surfaceSize" />
+                <ScalarProperty Name="Post_Property_bethroom" ColumnName="Post_Property_bethroom" />
+                <ScalarProperty Name="Post_Property_bathroom" ColumnName="Post_Property_bathroom" />
+                <ScalarProperty Name="Post_Property_listBy" ColumnName="Post_Property_listBy" />
+                <ScalarProperty Name="Post_Property_petAllow" ColumnName="Post_Property_petAllow" />
+                <ScalarProperty Name="Post_Property_numberOfParking" ColumnName="Post_Property_numberOfParking" />
+                <ScalarProperty Name="Post_Vihicles_vihiclesID" ColumnName="Post_Vihicles_vihiclesID" />
+                <ScalarProperty Name="Post_Vihicles_postID" ColumnName="Post_Vihicles_postID" />
+                <ScalarProperty Name="Post_Vihicles_makeID" ColumnName="Post_Vihicles_makeID" />
+                <ScalarProperty Name="Post_Vihicles_typeID" ColumnName="Post_Vihicles_typeID" />
+                <ScalarProperty Name="Post_Vihicles_colorID" ColumnName="Post_Vihicles_colorID" />
+                <ScalarProperty Name="Post_Vihicles_fuel" ColumnName="Post_Vihicles_fuel" />
+                <ScalarProperty Name="Post_Vihicles_transmission" ColumnName="Post_Vihicles_transmission" />
+                <ScalarProperty Name="Post_Vihicles_listBy" ColumnName="Post_Vihicles_listBy" />
+                <ScalarProperty Name="Post_Vihicles_mileage" ColumnName="Post_Vihicles_mileage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

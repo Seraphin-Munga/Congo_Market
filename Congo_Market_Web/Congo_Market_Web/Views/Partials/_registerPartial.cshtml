@@ -1,0 +1,163 @@
+﻿<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label">Nom</label>
+                        <input type="text" id="nom" class="form-control" placeholder=" " name="Name" required="">
+                        <span id="HiddenNom" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Pre Nom</label>
+                        <input type="text" id="preNom" class="form-control" placeholder=" " name="Name" required="">
+                        <span id="HiddenPre" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder=" " name="Email" required="">
+                        <span id="HiddenEmail" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Telephone</label>
+                        <input type="tel" id="telephone" class="form-control" placeholder=" " name="Name" required="">
+                        <span id="HiddenTelephone" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Mot De passe</label>
+
+                        <input type="password" class="form-control" placeholder=" " name="Password" id="password" required="">
+                        <span id="HiddenPassword" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+             
+                    <div class="right-w3l">
+                        <input type="button" id="btnRegister" class="form-control" value="Register">
+                    </div>
+                    <div class="sub-w3l">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                            <label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms & Conditions</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script> 
+
+
+    $(document).ready(function () {
+
+
+
+        $("#HiddenNom").hide();
+        $("#HiddenPre").hide();
+        $("#HiddenEmail").hide();
+        $("#HiddenTelephone").hide();
+        $("#HiddenPassword").hide();
+
+        let nomElmn = $("#nom");
+        let preNomElmn = $("#preNom");
+       
+        let telephoneaElmn = $("#telephone");
+        let passwordElmn = $("#password");
+        let emailElmn = $("#email");
+
+
+
+               $("#btnRegister").click(() => {
+
+        
+                   if (nomElmn.val() === "" || nomElmn.val() === null || nomElmn.val() === undefined) {
+                       $("#HiddenNom").show();
+                       return;
+                   } else {
+                       $("#HiddenNom").hide();
+                   }
+
+                   if (preNomElmn.val() === "" || preNomElmn.val() === null || preNomElmn.val() === undefined) {
+                       $("#HiddenPre").show();
+                       return;
+                   } else {
+                       $("#HiddenPre").hide();
+                   }
+
+                   if (emailElmn.val() === "" || emailElmn.val() === null || emailElmn.val() === undefined) {
+                       $("#HiddenEmail").show();
+                       return;
+                   } else {
+                       $("#HiddenEmail").hide();
+                   }
+
+                   if (telephoneaElmn.val() === "" || telephoneaElmn.val() === null || telephoneaElmn.val() === undefined) {
+                       $("#HiddenTelephone").show();
+                       return;
+                   } else {
+                       $("#HiddenTelephone").hide();
+                   }
+
+                   if (passwordElmn.val() === "" || passwordElmn.val() === null || passwordElmn.val() === undefined) {
+                       $("#HiddenPassword").show();
+                       return;
+                   } else {
+                       $("#HiddenPassword").hide();
+                   }
+
+                   if (passwordElmn.val().length !== 8) {
+                       alert('La longueur du mot de passe doit être de huit caractères');
+                       return;
+                   }
+
+                    let model = {};
+
+                    model.firstName = nomElmn.val();
+                    model.lastName = preNomElmn.val();
+                    model.email = emailElmn.val();
+                    model.telephone = telephoneaElmn.val();
+                    model.password = passwordElmn.val(); 
+
+
+                    $.ajax({
+
+                        url: "/Register/DB_Register_Creation",
+                        method: "POST",
+                        dataType: "JSON",
+                        data: model,
+                        success: function (reponse) {
+
+                            alert("Le registre a réussi. Veuillez vous connecter pour publier votre produit");
+
+                            nomElmn.val("");
+                            preNomElmn.val("");
+                            emailElmn.val("");
+                            telephoneaElmn.val("");
+                            passwordElmn.val(""); 
+
+                        }
+
+                    });
+
+
+
+                });
+
+
+
+    }); 
+
+       
+
+
+</script>

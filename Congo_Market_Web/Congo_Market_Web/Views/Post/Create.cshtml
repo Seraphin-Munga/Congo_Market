@@ -1,0 +1,525 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="wrapper">
+
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <a class="btn btn-primary" href="@Url.Action("DB_Post_List_Customer","Post")">Produits de votre liste</a>
+        </div>
+
+        <div class="col-sm-4">
+            <a class="btn btn-warning" href="@Url.Action("LogOff","_Account")">Log Out</a>
+
+        </div>
+
+    </div>
+    <br />
+
+    <form>
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                Importer des images
+            </label>
+            <div class="col-sm-10">
+                <input type="file" id="pro-image_2" name="pro-image" class="form-control" multiple>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Titre</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputTitle" placeholder="Titre">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Prix</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputPrice" placeholder="Prix">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Provinces</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputProvince">
+                    <option selected>Provinces</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Villes</label>
+
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputVille">
+                    <option selected>Villes</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Catégories</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputCategory">
+                    <option selected>Catégories</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                Sous-catégorie
+            </label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputSubcategory">
+                    <option selected>
+                        Sous-catégorie
+                    </option>
+
+                </select>
+            </div>
+
+        </div>
+
+        <fieldset class="form-group" id="iscondtion">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Condition</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" value="true" type="radio" name="gridRadios" id="gridRadios1">
+                        <label class="form-check-label" for="gridRadios1">
+                            Utilisée
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" value="false" type="radio" name="gridRadios" id="gridRadios1">
+                        <label class="form-check-label" for="gridRadios2">
+                            Nouveau
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="comment">Description:</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="5" id="inputDescription"></textarea>
+            </div>
+        </div>
+
+    </form>
+
+        <div  id="loader" class="wrapLoader">
+            <div  class="loader"></div>
+        </div>
+
+    
+
+    <div id="isProperty">
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Chambres</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputChambres" placeholder="Chambres">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Type de propriété</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputProperty">
+                    <option selected>Type de propriété</option>
+                </select>
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                Salles de bain
+            </label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputBathrooms" placeholder="Salles de bain">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Taille de la surface</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputSurface" placeholder="Taille de la surface">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div id="isVihicles">
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Marks</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inputMake">
+                    <option selected>Marks</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Types</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inpuType">
+                    <option selected>Types</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Courleurs</label>
+            <div class="col-sm-10">
+                <select class="custom-select custom-select-lg mb-3" id="inpuColor">
+                    <option selected>Courleurs</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Carburant</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputFuel" placeholder="Carburant">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                Transmission
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputTransmission" placeholder="Transmission ">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                Kilométrage
+            </label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputMileage" placeholder="Kilométrage">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button id="btnPublish" class="btn btn-primary">
+                    Publier
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+
+<script>
+
+
+    $(document).ready(function () {
+        $("#isProperty").hide();
+        $("#isVihicles").hide();
+        $("#loader").hide();
+
+
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_Province_List_2",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inputProvince').append($('<option>').val(provinceData[i].Province_provinceID).text(provinceData[i].Province_provinceName));
+
+                }
+
+            }
+        });
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_Make_List",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inputMake').append($('<option>').val(provinceData[i].Vihicles_Make_makeID).text(provinceData[i].Vihicles_Make_makeName));
+                }
+
+            }
+        });
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_TypeVihicle_List",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inpuType').append($('<option>').val(provinceData[i].Vihicles_Type_typeID).text(provinceData[i].Vihicles_Type_typeName));
+                }
+
+            }
+        });
+
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_Color_List",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inpuColor').append($('<option>').val(provinceData[i].Color_colorID).text(provinceData[i].Color_colorName));
+                }
+
+            }
+        });
+
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_PropertyType_List",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inputProperty').append($('<option>').val(provinceData[i].Property_Type_proppertyType).text(provinceData[i].Property_Type_propertyName));
+
+                }
+
+            }
+        });
+
+
+        $.ajax({
+
+            url: "/Mst/DB__Mst_Category_Lis",
+            method: "GET",
+            dataType: "JSON",
+            success: function (response) {
+
+                let provinceData = response;
+
+                for (var i = 0; i < provinceData.length; i++) {
+
+                    $('#inputCategory').append($('<option>').val(provinceData[i].Category_categoryID).text(provinceData[i].Category_categoryName));
+
+                }
+
+            }
+        });
+
+        $("#inputCategory").change(function () {
+
+
+            if ($(this).val() === "3") {
+                $("#isProperty").show();
+                $("#iscondtion").hide();
+            } else {
+                $("#isProperty").hide();
+
+            }
+
+
+            if ($(this).val() === "1") {
+                $("#isVihicles").show();
+                $("#iscondtion").hide();
+
+            } else {
+                $("#isVihicles").hide();
+            }
+
+
+            $.ajax({
+
+                url: "/Mst/DB__Mst_Subcategory_List",
+                method: "GET",
+                data: { categoryID: $(this).val() },
+                dataType: "JSON",
+                success: function (response) {
+
+                    let provinceData = response;
+                    $("#inputSubcategory").empty();
+                    $("#inputSubcategory").append("<aption>" + " Sous-catégorie" + "</option>")
+
+                    for (var i = 0; i < provinceData.length; i++) {
+                        $('#inputSubcategory').append($('<option>').val(provinceData[i].Subcategory_subcategoryID).text(provinceData[i].Subcategory_subcategoryName));
+                    }
+
+                }
+            });
+
+
+        });
+
+
+
+
+        $("#inputProvince").change(function () {
+            $.ajax({
+
+                url: "/Mst/DB__Mst_Town_List",
+                method: "GET",
+                data: { provinceID: $(this).val() },
+                dataType: "JSON",
+                success: function (response) {
+
+                    let provinceData = response;
+                    $('#inputVille').empty();
+
+                    for (var i = 0; i < provinceData.length; i++) {
+
+                        $('#inputVille').append($('<option>').val(provinceData[i].Town_townID).text(provinceData[i].Town_townName));
+
+                    }
+
+                }
+            });
+        });
+
+
+        var num = 4;
+
+
+
+        let inputTitleElmn = $("#inputTitle");
+        let inputPriceElmn = $("#inputPrice");
+        let inputProvinceElmn = $("#inputProvince");
+        let inputVilleElmn = $("#inputVille");
+        let inputCategoryElmn = $("#inputCategory");
+        let inputSubcategoryElmn = $("#inputSubcategory");
+        let gridRadios1Elmn = $("#gridRadios1");
+        let inputDescriptionElmn = $("#inputDescription");
+        let getFilesElmn = $("#pro-image_2");
+
+
+        $("#btnPublish").click(function () {
+
+            $("#loader").show();
+            let formData = new FormData();
+
+
+            var files = getFilesElmn.get(0).files;
+
+
+            for (var i = 0; i < files.length; i++) {
+                formData.append("uploadername", files[i]);
+            }
+
+
+            formData.append("townID", inputVilleElmn.val());
+            formData.append("subcategoryID", inputSubcategoryElmn.val());
+            formData.append("title", inputTitleElmn.val());
+
+            formData.append("price", inputPriceElmn.val());
+            formData.append("condition", gridRadios1Elmn.val());
+            formData.append("isSold", false);
+            formData.append("description", inputDescriptionElmn.val());
+
+            $.ajax({
+
+                url: "/Post/Create",
+                method: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                dataType: "JSON",
+                success: function (response) {
+
+                    $("#loader").hide();
+
+                    inputVilleElmn.val("");
+                    inputSubcategoryElmn.val("");
+                    inputTitleElmn.val("");
+                    inputPriceElmn.val("")
+                    gridRadios1Elmn.val("")
+                    inputDescriptionElmn.val("")
+                    swal("Bon travail!", "Vous avez cliqué sur le bouton!", "success")
+                
+
+                }
+            }).error(function () {
+                $("#loader").hide();
+                swal("Un problème est survenu", "Vous avez cliqué sur le bouton!", "error")
+            })
+
+
+        });
+
+
+
+    });
+
+
+
+
+
+
+
+
+</script>
+
+
+
+

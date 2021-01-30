@@ -1,0 +1,101 @@
+﻿<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center">Log In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="col-form-label">Email</label>
+                        <input type="text" id="email1" class="form-control" placeholder=" " name="Name" required="">
+                        <span id="HiddenEmail1" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Mot De Pass</label>
+                        <input type="password" id="password1" class="form-control" placeholder=" " name="Password" required="">
+                        <span id="HiddenPassword1" style="color:red">Cette zone de texte est obligatoire</span>
+                    </div>
+                    <div class="right-w3l">
+                        <input type="button" id="btnLogin" class="form-control" value="Log in">
+                    </div>
+                    <div class="sub-w3l">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                            <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
+                        </div>
+                    </div>
+                    <p class="text-center dont-do mt-3">
+                        Don't have an account?
+                        <a href="#" data-toggle="modal" data-target="#exampleModal2">
+                            Register Now
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script> 
+
+
+    $(document).ready(function () {
+
+        $("#HiddenEmail1").hide();
+        $("#HiddenPassword1").hide();
+
+        let passwordElmn = $("#password1");
+        let emailElmn = $("#email1");
+
+
+        $("#btnLogin").click(function () {
+            
+
+            if (emailElmn.val() === "" || emailElmn.val() === null || emailElmn.val() === undefined) {
+                $("#HiddenEmail1").show();
+                return;
+            } else {
+                $("#HiddenEmail1").hide();
+            }
+
+            if (passwordElmn.val() === "" || passwordElmn.val() === null || passwordElmn.val() === undefined) {
+                $("#HiddenPassword1").show();
+                return;
+            } else {
+                $("#HiddenPassword1").hide();
+            }
+
+
+            $.ajax({
+
+                url: "/Register/Login",
+                method: "POST",
+                dataType: "JSON",
+                data: { password: passwordElmn.val(), email: emailElmn.val()},
+                success: function (reponse) {
+
+                    window.location = "/Post/Create"
+                }
+
+            }).error(function (error) {
+                alert("Something went wrong!");
+
+                console.log(error);
+            });
+
+
+        })
+
+
+
+    });
+
+
+</script>
