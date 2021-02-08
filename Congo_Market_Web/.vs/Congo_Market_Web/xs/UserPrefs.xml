@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{51D8BAB9-085E-4168-A4C4-66223F763D64}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Congo_Market_Web/Web.config">
+    <Files>
+      <File FileName="Congo_Market_Web/Controllers/_AccountController.cs" Line="69" Column="1" />
+      <File FileName="Congo_Market_Web/Controllers/AccountController.cs" Line="143" Column="27" />
+      <File FileName="Congo_Market_Web/Web.config" Line="13" Column="219" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Congo_Market_Web" expanded="True">
+            <Node name="Congo_Market_Web" expanded="True">
+              <Node name="fonts" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Congo__Market__Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
