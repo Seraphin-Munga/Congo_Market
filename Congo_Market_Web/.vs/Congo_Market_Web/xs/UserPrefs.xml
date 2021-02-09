@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="{51D8BAB9-085E-4168-A4C4-66223F763D64}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Congo_Market_Web/Web.config">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Congo_Market_Web/Models/PostModel.cs">
     <Files>
-      <File FileName="Congo_Market_Web/Controllers/_AccountController.cs" Line="69" Column="1" />
-      <File FileName="Congo_Market_Web/Controllers/AccountController.cs" Line="143" Column="27" />
-      <File FileName="Congo_Market_Web/Web.config" Line="13" Column="219" />
+      <File FileName="Congo_Market_Web/Web.config" Line="13" Column="370" />
+      <File FileName="Congo_Market_Web/Controllers/HomeController.cs" Line="16" Column="1" />
+      <File FileName="Congo_Market_Web/Models/PostModel.cs" Line="126" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Congo_Market_Web" expanded="True">
             <Node name="Congo_Market_Web" expanded="True">
-              <Node name="fonts" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="PostModel.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Congo__Market__Web PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Congo__Market__Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/mac/Desktop/Congo Market/Congo_Market/Congo_Market_Web/Congo_Market_Web/Controllers/HomeController.cs" relfile="Congo_Market_Web/Controllers/HomeController.cs" line="14" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
